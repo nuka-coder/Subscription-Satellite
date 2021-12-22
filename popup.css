@@ -1,0 +1,74 @@
+/* Colors */
+:root {
+  --darkGold: #d2a32f;
+  --duskyGreen: #87845a;
+  --darkGreen: #3c350f;
+  --black: #000;
+}
+
+html, body {
+  font-family: Oswald, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  min-height: 18px;
+  padding: 0;
+  width: 384px;
+}
+
+h1 {
+  font-family: Roboto Mono, monospace;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  color: var(--darkGold);
+}
+a:link, a:visited {
+  color: var(--black);
+  outline: 0;
+  text-decoration: none;
+}
+/* logo image */
+img {
+  width: 50px;
+}
+.modal-header {
+  align-items: center;
+  border-bottom: 0.5px solid var(--duskyGreen);
+}
+.modal-content {
+  padding: 0 22px;
+  text-align: center;
+}
+.modal-icons {
+  border-top: 0.5px solid var(--duskyGreen);
+  height: 50px;
+  width: 100%;
+}
+.logo-title-group {
+  padding: 16px;
+}
+.logo-icon {
+  vertical-align: middle;
+  margin-right: 12px;
+}
+.version {
+  color: var(--darkGreen);
+  font-size: 16px;
+}
+.inputs-form {
+  border-top: .5px solid var(--black);
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px 5px;
+  text-align: center;
+}
+.flex {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  width: 120px;
+}
+.flex:hover {
+  opacity: 0.5;
+}

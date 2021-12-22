@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Subscription Satelite</title>
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="modal-header">
+    <h1 class="logo-title-group">
+      <img src="images/Subscription Satelite-Logo.png" alt="Subscription Satelite" class="logo-icon"> Subscription Satelite <span class="version">(1.0.0)</span>
+    </h1>
+  </div>
+
+  <div class="modal-content">
+    <p>Easily track and remember all those pesky subscriptions.</p>
+  </div>
+
+  <div class="modal-inputs">
+    <form class="inputs-form">
+      <div class="flex-container">
+
+          <div class="inputs">
+            <input type="search" name="subscirptionSearch" list="subscriptionList" placeholder="Your Subscription">
+
+            <datalist id="subscriptionList">
+              <option value="Amazon Prime">Amazon Prime</option>
+              <option value="Hulu"></option>
+              <option value="HBO"></option>
+              <option value="Netflix"></option>
+              <option value="Playstation Now"></option>
+              <option value="Rakuten Viki"></option>
+              <option value="XBOX Live"></option>
+              <option value="Zipcar"></option>
+            </datalist>
+          </div>
+          <div class="inputs">
+            <input type="search" name="renewalSearch" placeholder="Renewal Cycle" list="renewalSearch">
+            <datalist id="renewalSearch">
+              <option value="Weekly"></option>
+              <option value="Monthly"></option>
+              <option value="Yearly"></option>
+              <option value="3 months"></option>
+              <option value="6 months"></option>
+            </datalist>
+          </div>
+      </div>
+      <div class="flex-container">
+
+        <div class="inputs">
+          <label for="cost"></label>
+          <input type="text" name="cost" placeholder="Cost">
+        </div>
+        <div class="inputs">
+          <label for="date"></label>
+          <input type="date" name="date">
+        </div>
+      </div>
+      <div class="inputs">
+        <button type="submit" class="form-submit">Add</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
