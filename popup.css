@@ -1,15 +1,17 @@
 /* Colors */
 :root {
-  --darkGold: #d2a32f;
-  --duskyGreen: #87845a;
-  --darkGreen: #3c350f;
+  --darkBlue: #2B4A5E;
+  --lightBlue: #78ABCA;
+  --darkGold: #CD932B;
   --black: #000;
+  --white: #fff;
 }
 
 html, body {
+  background-color: var(--darkBlue);
   font-family: Oswald, sans-serif;
   font-size: 14px;
-  margin: 0;
+  margin: 0 8px 10px 0;
   min-height: 18px;
   padding: 0;
   width: 384px;
@@ -20,7 +22,7 @@ h1 {
   font-size: 18px;
   font-weight: bold;
   margin: 0;
-  color: var(--darkGold);
+  color: var(--lightBlue);
 }
 a:link, a:visited {
   color: var(--black);
@@ -29,39 +31,54 @@ a:link, a:visited {
 }
 /* logo image */
 img {
-  width: 50px;
+  width: 60px;
+}
+input {
+  border: 1px solid var(--darkGold);
+  color: var(--darkBlue);
+  font-family: Roboto Mono, monospace;
+  font-size: 12px;
+  font-weight: lighter;
+  margin-right: 2px;
+  padding: 2px;
+  text-transform: uppercase;
+  width: 120px;
+}
+p {
+  color: var(--lightBlue);
+  font-weight: lighter;
 }
 .modal-header {
   align-items: center;
-  border-bottom: 0.5px solid var(--duskyGreen);
+  border-bottom: 0.5px solid var(--white);
+  display: flex;
+  justify-content: center;
+  margin: 0 5px;
 }
-.modal-content {
-  padding: 0 22px;
+.modal-description {
+  margin: 0 0 5px;
+  padding: 0;
   text-align: center;
 }
-.modal-icons {
-  border-top: 0.5px solid var(--duskyGreen);
-  height: 50px;
-  width: 100%;
+.modal-content {
+  margin: 0 8px 0;
 }
-.logo-title-group {
-  padding: 16px;
+.modal-title {
+  padding: 16px 8px 2px;
 }
 .logo-icon {
+  margin: 16px 0 8px 10px;
   vertical-align: middle;
-  margin-right: 12px;
 }
 .version {
-  color: var(--darkGreen);
-  font-size: 16px;
+  color: var(--darkGold);
+  font-size: 14px;
 }
-.inputs-form {
-  border-top: .5px solid var(--black);
-}
+
 .flex-container {
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px 5px;
+  padding: 10px 10px 5px;
   text-align: center;
 }
 .flex {
@@ -71,4 +88,25 @@ img {
 }
 .flex:hover {
   opacity: 0.5;
+}
+.lower-inputs {
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+}
+.form-submit-btn {
+  background-color: var(--darkGold);
+  color: var(--white);
+  font-size: 12px;
+  padding: 5px 20px;
+  border: none;
+  transition: opacity 0.5s ease-in-out;
+}
+.form-submit-btn:hover {
+  cursor: pointer;
+  opacity: .5;
+}
+.table-data-style {
+  background-color: var(--white);
+  padding: 2px 10px;
 }

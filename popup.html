@@ -8,26 +8,33 @@
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="popup.css">
 </head>
+
+
 <body>
+  <!-- Modal Heading -->
   <div class="modal-header">
-    <h1 class="logo-title-group">
-      <img src="images/Subscription Satelite-Logo.png" alt="Subscription Satelite" class="logo-icon"> Subscription Satelite <span class="version">(1.0.0)</span>
-    </h1>
+    <div class="modal-logo">
+      <img src="images/Subscription Satelite-Logo.png" alt="Subscription Satelite" class="logo-icon">
+    </div>
+    <div class="modal-content">
+      <h1 class="modal-title">
+         Subscription Satelite <span class="version">(1.0.0)</span>
+      </h1>
+      <p class="modal-description">easily track and remember all those pesky subscriptions.</p>
+    </div>
   </div>
 
-  <div class="modal-content">
-    <p>Easily track and remember all those pesky subscriptions.</p>
-  </div>
-
+<!-- Modal Inputs -->
   <div class="modal-inputs">
-    <form class="inputs-form">
+    <form id="input-form" class="input-form">
       <div class="flex-container">
 
           <div class="inputs">
-            <input type="search" name="subscirptionSearch" list="subscriptionList" placeholder="Your Subscription">
+            <label for="subscriptions"></label>
+            <input id="subscriptions" type="search" name="subscirptions" list="subscriptionList" placeholder="Subscription">
 
             <datalist id="subscriptionList">
-              <option value="Amazon Prime">Amazon Prime</option>
+              <option value="Amazon Prime"></option>
               <option value="Hulu"></option>
               <option value="HBO"></option>
               <option value="Netflix"></option>
@@ -38,7 +45,8 @@
             </datalist>
           </div>
           <div class="inputs">
-            <input type="search" name="renewalSearch" placeholder="Renewal Cycle" list="renewalSearch">
+            <label for="renewal"></label>
+            <input id="renewal" type="search" name="renewal" placeholder="Renewal" list="renewalSearch">
             <datalist id="renewalSearch">
               <option value="Weekly"></option>
               <option value="Monthly"></option>
@@ -47,23 +55,39 @@
               <option value="6 months"></option>
             </datalist>
           </div>
-      </div>
-      <div class="flex-container">
-
         <div class="inputs">
           <label for="cost"></label>
-          <input type="text" name="cost" placeholder="Cost">
+          <input id="cost" type="number" name="cost" min="1" max="10000" value="0.00" step=".01">
         </div>
+
+      </div>
+      <div class="lower-inputs">
         <div class="inputs">
           <label for="date"></label>
-          <input type="date" name="date">
+          <input id="date" type="date" name="date">
         </div>
-      </div>
-      <div class="inputs">
-        <button type="submit" class="form-submit">Add</button>
+        <div class="inputs">
+          <button type="submit" class="form-submit-btn">Add</button>
+        </div>
       </div>
     </form>
   </div>
 
+  <!-- Table for Subscriptions -->
+  <div>
+    <table id="subscriptionTable">
+      <tbody id="subscriptionTableBody">
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+  <!-- Javascript Script -->
+<script src="popup.js" charset="utf-8"></script>
 </body>
 </html>
